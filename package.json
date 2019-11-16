@@ -1,0 +1,19 @@
+{
+  "name": "git-master-of-metal",
+  "version": "0.1.0",
+  "description": "METAL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnhaup/git-master-of-metal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnhaup/git-master-of-metal/issues"
+  },
+  "homepage": "https://github.com/johnhaup/git-master-of-metal#readme"
+}

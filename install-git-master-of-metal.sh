@@ -31,7 +31,7 @@ mkdir $GIT_DIR/hooks/pre-push-files
 # curl -fL -o "$GIT_DIR/hooks/pre-push-files/" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/"
 curl -fL "$GIT_DIR/hooks/pre-push-files/first_prompt.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
 curl "$GIT_DIR/hooks/pre-push-files/force_push_master.mp3" -fL -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
-curl -fL -o "$GIT_DIR/hooks/pre-push-files/master_master.mp3" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
+curl "$GIT_DIR/hooks/pre-push-files/master_master.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files/metallica.txt" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/metallica.txt"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files/pantera.txt" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/pantera.txt"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files/second_prompt.mp3" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/second_prompt.mp3"

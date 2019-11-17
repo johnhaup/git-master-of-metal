@@ -29,12 +29,13 @@ echo
 curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
 mkdir $GIT_DIR/hooks/pre-push-files
 
-curl "$GIT_DIR/hooks/pre-push-files/first_prompt.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
-curl "$GIT_DIR/hooks/pre-push-files/force_push_master.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
+
 curl "$GIT_DIR/hooks/pre-push-files/master_master.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
 curl "$GIT_DIR/hooks/pre-push-files/metallica.txt" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/metallica.txt"
 curl "$GIT_DIR/hooks/pre-push-files/pantera.txt" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/pantera.txt"
 curl "$GIT_DIR/hooks/pre-push-files/second_prompt.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/second_prompt.mp3"
+curl "$GIT_DIR/hooks/pre-push-files/first_prompt.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
+curl "$GIT_DIR/hooks/pre-push-files/force_push_master.mp3" -o "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
 # # if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
 # 	echo Error downloading pre-push script!
 # 	exit 3

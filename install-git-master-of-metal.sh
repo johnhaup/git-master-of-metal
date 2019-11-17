@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script was copied with love from https://gist.githubusercontent.com/stefansundin/d465f1e331fc5c632088/raw/install-pre-push.sh 
 
-# curl -fL https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/install-git-master-of-metal.sh | sh
+# curl -fL -s https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/install-git-master-of-metal.sh | sh
 # Uninstall:
 # rm .git/hooks/pre-push
 
@@ -28,7 +28,7 @@ echo
 
 curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
 mkdir $GIT_DIR/hooks/pre-push-files
-curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
+curl -fL -o "$GIT_DIR/hooks" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/metallica.txt"

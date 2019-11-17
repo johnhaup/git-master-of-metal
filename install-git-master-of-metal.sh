@@ -29,8 +29,8 @@ echo
 curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
 mkdir $GIT_DIR/hooks/pre-push-files
 curl -fL "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/first_prompt.mp3"
-curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
-curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
+curl -fL -o "$GIT_DIR/hooks/" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/force_push_master.mp3"
+curl -fL -o "$GIT_DIR/hooks" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/master_master.mp3"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/metallica.txt"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/pantera.txt"
 curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push-files/second_prompt.mp3"
@@ -41,7 +41,6 @@ curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/j
 
 chmod +x "$GIT_DIR/hooks/pre-push"
 
-echo "You're all set! Happy hacking!"
-echo "P.S. There is now a way to install this globally, see the instructions on the gist page."
+echo "Git Master of Metal installed in project!"
 
 exit 0

@@ -27,10 +27,11 @@ echo Downloading pre-push hook from https://github.com/johnhaup/git-master-of-me
 echo
 
 curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
-if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
-	echo Error downloading pre-push script!
-	exit 3
-fi
+curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files"
+# if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
+# 	echo Error downloading pre-push script!
+# 	exit 3
+# fi
 
 chmod +x "$GIT_DIR/hooks/pre-push"
 

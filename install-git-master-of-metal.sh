@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script was copied with love from https://gist.githubusercontent.com/stefansundin/d465f1e331fc5c632088/raw/install-pre-push.sh 
 
-# curl -fL https://github.com/johnhaup/git-master-of-metal/install-pre-push.sh | sh
+# curl -fL https://github.com/johnhaup/git-master-of-metal/raw/install-pre-push.sh | sh
 # Uninstall:
 # rm .git/hooks/pre-push
 

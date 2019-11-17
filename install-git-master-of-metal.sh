@@ -27,8 +27,14 @@ echo Downloading pre-push hook from https://github.com/johnhaup/git-master-of-me
 echo
 
 curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
-curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files"
-# if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
+mkdir $GIT_DIR/hooks/pre-push/pre-push-files
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/first_prompt.mp3"
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/force_push_master.mp3"
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/master_master.mp3"
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/metallica.txt"
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/pantera.txt"
+# curl -fL -o "$GIT_DIR/hooks/pre-push/pre-push-files" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push/pre-push-files/second_prompt.mp3"
+# # if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
 # 	echo Error downloading pre-push script!
 # 	exit 3
 # fi

@@ -26,7 +26,7 @@ fi
 echo Downloading pre-push hook from https://github.com/johnhaup/git-master-of-metal
 echo
 
-curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/pre-push"
+curl -fL -o "$GIT_DIR/hooks/pre-push" "https://raw.githubusercontent.com/johnhaup/git-master-of-metal/master/pre-push"
 if [ ! -f "$GIT_DIR/hooks/pre-push" ]; then
 	echo Error downloading pre-push script!
 	exit 3

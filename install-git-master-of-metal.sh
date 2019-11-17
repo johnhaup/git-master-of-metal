@@ -15,6 +15,8 @@ if [ "$GIT_DIR" == "" ]; then
 	exit 1
 fi
 
+mkdir $GIT_DIR/hooks/pre-push/pre-push-files
+
 if [ -f "$GIT_DIR/hooks/pre-push" ]; then
 	echo There is already a pre-push hook installed. Delete it first.
 	echo

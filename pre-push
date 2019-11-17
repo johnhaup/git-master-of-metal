@@ -1,0 +1,81 @@
+#!/bin/sh
+#!/bin/bash
+TOP_LEVEL_PATH=`git rev-parse --show-toplevel`
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PUSH_COMMAND=`ps -ocommand= -p $PPID`
+
+if [[ "$BRANCH" == "master" && "$PUSH_COMMAND" =~ force|delete|-f ]]; then
+		afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/first_prompt.mp3 > /dev/null 2>&1 &
+    echo "\033[33mYou're about to FORCE PUSH master.  Are you sure? [y|n] \033[0m";
+    read -n 1 -r < /dev/tty
+    echo "\033[0m"
+
+    if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+    then
+
+		if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+			then
+					afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/second_prompt.mp3 > /dev/null 2>&1 &
+					# Push to master - Prompt 2
+					echo "\033[31mLAST CHANCE! YOU'RE REALLY GOING TO FORCE PUSH THE MASTER BRANCH?!? [Y|N] \033[0m"
+   				read -n 1 -r < /dev/tty
+    			echo "\033[0m"
+    
+    			echo
+    			if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+					# Push to master - Complete
+    			then
+							afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/force_push_master.mp3 > /dev/null 2>&1 &
+							cat $TOP_LEVEL_PATH/.git/hooks/pre-push-files/pantera.txt
+							echo
+							echo
+							echo "\033[34mYOU'RE AS CRAZY AS PHIL ANSELMO.  YOUR TEAM APPRECIATES YOU! \033[0m"
+							echo
+        			exit 0 # push will execute
+    			fi
+						# Declined prompt 2
+    				exit 1 # push will not execute
+			fi
+				# Decline prompt 1
+				exit 1 # push will not execute
+        exit 0 # push will execute
+    fi
+    exit 1 # push will not execute
+else
+
+	if [ $BRANCH = 'master' ]
+	afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/first_prompt.mp3 > /dev/null 2>&1 &
+	then
+			# Push to master - Prompt 1
+			echo "\033[33mYou're about to push master.  Are you crazy? [y|n] \033[0m"
+			read -n 1 -r < /dev/tty
+			echo "\033[0m"
+
+			if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+			then
+					afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/second_prompt.mp3 > /dev/null 2>&1 &
+					# Push to master - Prompt 2
+					echo "\033[31mLAST CHANCE! ARE YOU REALLY SURE?? [Y|N] \033[0m"
+   				read -n 1 -r < /dev/tty
+    			echo "\033[0m"
+    
+    			echo
+    			if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+					# Push to master - Complete
+    			then
+							afplay -v 0.1 $TOP_LEVEL_PATH/.git/hooks/pre-push-files/master_master.mp3 > /dev/null 2>&1 &
+							cat $TOP_LEVEL_PATH/.git/hooks/pre-push-files/metallica.txt
+							echo "\033[34mYOU'RE THE MASTER OF BRANCHES! \033[0m"
+							echo
+        			exit 0 # push will execute
+    			fi
+						# Declined prompt 2
+    				exit 1 # push will not execute
+			fi
+				# Decline prompt 1
+				exit 1 # push will not execute
+	fi
+		# Branch is not master
+    exit 0 # push will execute
+fi 
+

@@ -41,6 +41,6 @@ curl -fL -o "$GIT_DIR/hooks/pre-push-files" "https://raw.githubusercontent.com/j
 
 chmod +x "$GIT_DIR/hooks/pre-push"
 
-echo "Git Master of Metal installed in project!"
+echo "Git Master of Metal installed in project!!"
 
 exit 0
